@@ -24,6 +24,24 @@ header {
   border-radius: 5px;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+.auth-toggle {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+}
+
+.auth-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 header h1 {
   margin-bottom: 10px;
 }
@@ -149,6 +167,45 @@ section h3 {
   font-size: 16px;
 }
 
+.form-group input:focus {
+  outline: 2px solid #3949ab;
+  outline-offset: 1px;
+}
+
+.login-dialog {
+  width: min(420px, calc(100% - 32px));
+  margin: auto;
+  padding: 24px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.login-dialog::backdrop {
+  background: rgba(20, 24, 45, 0.55);
+}
+
+.login-dialog h2 {
+  margin-bottom: 20px;
+  color: #1a237e;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.secondary-button {
+  background: #e8eaf6;
+  color: #1a237e;
+}
+
+.secondary-button:hover {
+  background: #c5cae9;
+}
+
 button {
   background-color: #1a237e;
   color: white;
@@ -197,4 +254,27 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header h2 {
+    font-size: 18px;
+  }
 }
